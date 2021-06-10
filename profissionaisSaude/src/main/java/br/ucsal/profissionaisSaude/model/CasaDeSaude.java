@@ -1,11 +1,13 @@
 package br.ucsal.profissionaisSaude.model;
 
+import java.util.List;
+
 public class CasaDeSaude {
 
 	private int id;
 	private String nome;
 	private String tipo;
-	private String crm;
+	private List<String> crm;
 
 	
 	public int getId() {
@@ -20,11 +22,11 @@ public class CasaDeSaude {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getCrm() {
+	public List<String> getCrm() {
 		return crm;
 	}
 	public void setCrm(String crm) {
-		this.crm = crm;
+		this.crm.add(crm);
 	}
 	public String getTipo() {
 		return tipo;

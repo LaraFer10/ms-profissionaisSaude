@@ -12,9 +12,12 @@ public class CasaDeSaudeService {
 		List<CasaDeSaude> nursingHomes = listNursingHome();
 		List<CasaDeSaude> filteredNursingHomes = new ArrayList<>();
 		for(CasaDeSaude nursingHome : nursingHomes) {
-			if(nursingHome.getCrm().equals(crm)) {
-				filteredNursingHomes.add(nursingHome);
+			for(String crmFromList : nursingHome.getCrm()) {
+				if(crmFromList.equals(crm)) {
+					filteredNursingHomes.add(nursingHome);
+				}
 			}
+			
 		}
 		return filteredNursingHomes;
 	}
