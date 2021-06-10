@@ -16,5 +16,10 @@ public class MedicosController {
 		return (new MedicoService()).obterNomePorCRM(crm);
 	}
 	
+	@GetMapping(path="/especialidade/{crm}")
+	public String obterEspecialidade(@PathVariable String crm) {
+		return (new MedicoService()).obterEspecialidadePorCRM(crm);
+	}
+	
 
 }
