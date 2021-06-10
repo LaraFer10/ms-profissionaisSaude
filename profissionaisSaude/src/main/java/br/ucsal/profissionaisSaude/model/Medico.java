@@ -1,11 +1,28 @@
 package br.ucsal.profissionaisSaude.model;
 
+import java.util.List;
+
 public class Medico {
 
 	private int id;
 	private String nome;
 	private String crm;
+	private String especialidade;
+	private List<Atendimento> atendimentos;
 	
+	
+	public List<Atendimento> getAtendimentos() {
+		return atendimentos;
+	}
+	public void setAtendimentos(Atendimento atendimentos) {
+		this.atendimentos.add(atendimentos);
+	}
+	public String getEspecialidade() {
+		return especialidade;
+	}
+	public void setEspecialidade(String especialidade) {
+		this.especialidade = especialidade;
+	}
 	public int getId() {
 		return id;
 	}
